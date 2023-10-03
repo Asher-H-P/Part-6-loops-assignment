@@ -251,7 +251,39 @@ namespace Part_6_loops_assignment
         }
         public static void Oddsum()
         {
-            
+            int endNum, result;
+            string redo;
+            bool done = false;
+            while (!done)
+            {
+                result = 1;
+                Console.WriteLine("Please put in a number.");
+                endNum = Convert.ToInt32(Console.ReadLine());
+                for (int i = 1; i <= endNum;)
+                {
+                    Console.Write($"{i}, ");
+                    result = result + 2;
+                    i = i + 2;
+                }
+                result = result / 2;
+                Console.WriteLine();
+                Console.WriteLine(result * result);
+                Console.WriteLine();
+                Console.WriteLine("Would you like to do it again? (Y/N)");
+                redo = Console.ReadLine().ToUpper();
+                if (redo == "Y")
+                {
+                    Console.WriteLine("Ok");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                }
+                else if (redo != "Y")
+                {
+                    done = true;
+                    Console.WriteLine("Goodbye.");
+                }
+            }
+
         }
         public static void Randomnumbers()
         {
